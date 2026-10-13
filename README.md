@@ -42,7 +42,7 @@ https://github.com/user-attachments/assets/d3be6c59-f596-47b1-b32f-467ab03ce674
 
 
 https://github.com/user-attachments/assets/e4ca52c5-4897-4d22-b2de-c1857b4e4dba
-
+The clip above is silent. [Download the original with audio](https://github.com/TheThriftyLog/vision-project/raw/main/media/session_1_demo.mp4) (MP4, 19.6 MB).
 
 
 
