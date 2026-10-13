@@ -1,2 +1,26 @@
+# Model weights (Ultralytics downloads these automatically)
 *.pt
+*.onnx
+*.engine
+
+# Ultralytics output
+runs/
+
+# Python
 __pycache__/
+*.pyc
+.venv/
+
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Large media: upload videos through the GitHub editor or link them instead
+*.mp4
+*.mov
+*.MOV
+*.webm
+
+*:Zone.Identifier
+cyclonedds*.xml
