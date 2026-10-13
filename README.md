@@ -31,9 +31,24 @@ Three timed runs at full PWM for 2.0 s each covered 194.5, 195.5, and 196.5 cm, 
 
 <!-- VIDEO: on github.com, edit this file and drag speed-runs.mp4 onto this line -->
 
+
+https://github.com/user-attachments/assets/d3be6c59-f596-47b1-b32f-467ab03ce674
+
+
+
 ### Session 1: YOLO11 on a webcam
 
 <!-- VIDEO: on github.com, edit this file and drag session_1_demo.mp4 onto this line -->
+
+
+https://github.com/user-attachments/assets/e4ca52c5-4897-4d22-b2de-c1857b4e4dba
+
+
+
+
+
+
+
 
 ## Engineering approach
 
