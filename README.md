@@ -14,7 +14,7 @@ Built on a Freenove Tank Robot Kit (Raspberry Pi 4) running ROS 2 Jazzy, with pe
 | Jul–Sep 2026 | **Phase 0:** robot assembled; 5 of 6 subsystems pass acceptance tests; drivetrain and camera measured on carpet | [Test photos and video](#test-evidence), [hardware notes](docs/hardware-setup.md), [bench checklist](docs/phase0_bench_checklist.md) |
 | Oct 2026 | **Phase 1:** ROS 2 Jazzy running across the Pi and the laptop over home WiFi; link measured; three stacked faults found and fixed | [Networking write-up](docs/networking.md) |
 | Next | **Phase 2:** camera node on the Pi (`image_raw`, `camera_info`) with checkerboard calibration | |
-| Planned | **Phase 3:** YOLO11 segmentation on the laptop, then a YOLOX port | |
+| Planned | **Phase 3:** YOLO11 segmentation on the laptop | |
 | Planned | **Phase 4:** search/track state machine, visual servoing, safety interlock | |
 
 ## Test evidence
@@ -121,7 +121,7 @@ Getting ROS 2 to talk across this network meant fixing three independent faults.
 ## Design decisions
 
 - **ROS 2 Jazzy**, for its long-term support (end of life May 2029).
-- **YOLO11 first, YOLOX later.** Ultralytics YOLO11 is the fastest way to learn segmentation; YOLOX (Apache 2.0) is the deployment target for licensing reasons.
+- **YOLO11 for perception.** Its built-in segmentation is the fastest path to a finished, working system. Detections reach the controller over a ROS topic, so the model can be swapped later without changing anything downstream.
 - **Segmentation masks, not bounding boxes.** The mask centroid gives a better bearing than a box center, and the mask's shape gives a better distance estimate.
 - **Split compute.** Segmentation on the Pi's CPU would be far too slow, so the Pi captures and actuates and the laptop GPU runs inference.
 - **No SLAM, for now.** The robot needs to see the cat and drive toward her, not localize on a map. Visual SLAM is a stretch goal.
